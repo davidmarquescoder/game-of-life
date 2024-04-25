@@ -1,0 +1,58 @@
+#game-screen {
+    padding: 20px;
+    margin: 30px auto;
+    max-width: 40%;
+    display: flex;
+    justify-content: space-around;
+    border: 1px solid #ccc;
+    box-shadow: 0px 8px 10px rgba(0, 0, 0, .5);
+  }
+  
+  #game-score p {
+    font-size: 15pt;
+  }
+  
+  #grid-container {
+    display: grid;
+    grid-template-columns: repeat(20, 20px);
+    grid-template-rows: repeat(20, 20px);
+  }
+  
+  #grid-container div {
+    width: 20px;
+    height: 20px;
+    border: 1px solid #ccc;
+  }
+  
+  .alive {
+    background-color: #000;
+  }
+  
+  .dead {
+    background-color: #fff;
+  }
+  
+  #controls {
+    display: flex;
+    justify-content: space-evenly;
+  }
+  
+  button {
+    width: 20%;
+  }
+  
+  button:hover {
+    transition: 0.2s;
+    box-shadow: 0px 8px 10px rgba(0, 0, 0, .5);
+  }
+  
+  button:active {
+    box-shadow: none;
+    transform: translateY(2px);
+  }
+  
+  button i {
+    font-size: 30px;
+    color: #ffff;
+  }
+  

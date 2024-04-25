@@ -65,7 +65,7 @@ function countNeighbors(x, y) {
       count += grid[row][col];
     }
   }
-  
+
   count -= grid[x][y];
   return count;
 }
@@ -93,6 +93,30 @@ function nextGeneration() {
 
   grid = newGrid;
 }
+
+// Start
+function startGame() {
+  intervalId = setInterval(() => {
+    nextGeneration();
+    drawGrid();
+  }, 100);
+}
+
+// Stop
+function stopGame() {
+  clearInterval(intervalId);
+}
+
+// Restart Game
+function restartGame() {
+  stopGame()
+  createGrid()
+  drawGrid()
+}
+
+document.getElementById('start-btn').addEventListener('click', startGame);
+document.getElementById('stop-btn').addEventListener('click', stopGame);
+document.getElementById('restart-btn').addEventListener('click', restartGame);
 
 // Inicialização
 createGrid()

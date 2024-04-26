@@ -19,15 +19,22 @@ function countCells(matriz) {
 // Contagem de vizinhos
 function countNeighbors(x, y, grid, rows, cols) {
   let count = 0;
-  for (let i = -1; i <= 1; i++) {
-    for (let j = -1; j <= 1; j++) {
-      const row = (x + i + rows) % rows;
-      const col = (y + j + cols) % cols;
-      count += grid[row][col];
+  // Define os deslocamentos relativos para cada vizinho
+  const offsets = [
+    [-1, -1], [-1, 0], [-1, 1],
+    [0, -1],           [0, 1],
+    [1, -1], [1, 0], [1, 1]
+  ];
+  // Itera sobre os vizinhos
+  for (const [dx, dy] of offsets) {
+    // Calcula as coordenadas do vizinho
+    const nx = x + dx;
+    const ny = y + dy;
+    // Verifica se o vizinho está dentro dos limites do grid
+    if (nx >= 0 && nx < rows && ny >= 0 && ny < cols) {
+      count += grid[nx][ny];
     }
   }
-
-  count -= grid[x][y];
   return count;
 }
 

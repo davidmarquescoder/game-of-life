@@ -1,29 +1,28 @@
 import { createGrid, drawGrid, nextGeneration, grid, rows, cols } from '../js/grid.js';
 
-// Testes para a função createGrid
+// Testes para a função createGrid.
 describe('createGrid function', () => {
   test('should create a grid with the correct dimensions', () => {
     createGrid();
 
-    // Verifica o número de linhas
     expect(grid.length).toBe(rows);
 
-    // Verifica o número de colunas em cada linha
+    // Verifica o número de colunas.
     expect(grid.every(row => row.length === cols)).toBe(true);
   });
 
   test('should fill the grid with values between 0 and 1', () => {
     createGrid();
 
-    // Verifica se os valores no grid estão dentro do intervalo esperado (0 ou 1)
+    // Verifica se os valores no grid estão dentro do intervalo esperado (0 ou 1).
     expect(grid.every(row => row.every(cell => cell === 0 || cell === 1))).toBe(true);
   });
 });
 
 
-// Testes para a função drawGrid
+// Testes para a função drawGrid.
 describe('drawGrid function', () => {
-  // Defina um ambiente simulado para testar a função drawGrid
+  // Ambiente simulado para testar a função drawGrid.
   document.body.innerHTML = `
     <div id="grid-container"></div>
     <div id="alive-count"><span></span></div>
@@ -33,16 +32,15 @@ describe('drawGrid function', () => {
   test('should create HTML elements representing the grid', () => {
     drawGrid();
 
-    // Verifica se os elementos HTML foram criados corretamente
     const gridContainer = document.getElementById('grid-container');
 
-    // Verifica se o número de elementos criados é igual ao número de células no grid
+    // Número de elementos criados é igual ao número de células no grid.
     expect(gridContainer.children.length).toBe(rows * cols);
   });
 });
 
 
-// Testes para a função nextGeneration
+// Testes para a função nextGeneration.
 describe('nextGeneration function', () => {
   createGrid()
 

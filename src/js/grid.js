@@ -65,4 +65,7 @@ export {
   createGrid,
   drawGrid,
   nextGeneration,
+  grid,
+  rows,
+  cols
 };

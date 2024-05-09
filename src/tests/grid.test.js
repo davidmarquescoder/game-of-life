@@ -1,4 +1,4 @@
-import { createGrid, drawGrid, nextGeneration, grid, rows, cols } from '../js/grid.js';
+import { createGrid, drawGrid, nextGeneration, grid, rows, cols } from '../public/js/grid';
 
 // Testes para a função createGrid.
 describe('createGrid function', () => {

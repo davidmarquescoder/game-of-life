@@ -1,4 +1,4 @@
-import { countCells, countNeighbors } from '../js/count.js';
+import { countCells, countNeighbors } from '../public/js/count';
 
 // Tests countCells function
 it('should correctly count the number of alive and dead cells in a matrix', () => {

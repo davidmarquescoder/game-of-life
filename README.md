@@ -8,10 +8,11 @@ O Jogo da Vida é um autômato celular desenvolvido por John Horton Conway em 19
 
 ## Instalação
 
-Não é necessária nenhuma instalação para utilizar este projeto. Basta abrir o arquivo `index.html` em um navegador web.
-Porém para realizar o testes do jest é necessário instalar as dependências, rode o comando:
+Rode o comando:
 
 - npm install
+
+Após realizar as instalações, basta rodar o comando `npm start` na pasta raiz do projeto e acessar a url: `http://localhost:3333/`.
 
 ## Como Jogar
 
@@ -46,11 +47,15 @@ Contribuições são bem-vindas! Se você quiser contribuir com este projeto, si
 
 ## Testes
 
-Os testes são escritos utilizando o framework Jest e estão localizados nos arquivos `tests/count.test.js` e `tests/grid.test.js`. Para executar os testes, você pode utilizar o comando:
+Os testes são escritos utilizando o framework Jest e estão localizados nos arquivos `/src/tests/count.test.js` e `/src/tests/grid.test.js`. Para executar os testes, você pode utilizar o comando:
 
 Rode esse comando na pasta raiz do projeto:
 
 - npx jest
+
+ou o script:
+
+- npm test
 
 ## Autor
 
